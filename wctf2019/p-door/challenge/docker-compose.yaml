@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+    db:
+        image: redis:5.0
+        restart: always
+        volumes:
+            - "./flag:/flag"
+    app:
+        build: .
+        ports:
+            - "1180:80"
+
+
+
+
